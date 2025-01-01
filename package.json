@@ -1,0 +1,9 @@
+{
+  "name": "mitm",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "puppeteer": "^19.0.0",
+    "clipboardy": "^3.0.0"
+  }
+}

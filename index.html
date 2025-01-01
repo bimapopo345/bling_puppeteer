@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <div class="flex h-screen">
+
+        <!-- Sidebar -->
+        <aside class="w-64 bg-white border-r p-4">
+            <div class="flex items-center pb-4 border-b">
+                <div class="bg-blue-600 text-white font-bold rounded-full w-8 h-8 flex items-center justify-center">
+                    <span class="text-xl">P</span>
+                </div>
+                <input type="text" placeholder="Enter the keyword here"
+                    class="ml-2 px-3 py-1 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 w-full">
+            </div>
+            <nav class="mt-4">
+                <a href="#" class="flex items-center py-2 px-4 text-gray-700 hover:bg-gray-100 rounded-md">
+                    <i class="fas fa-th-large mr-2"></i> Menu
+                </a>
+                <a href="#" class="flex items-center py-2 px-4 text-gray-700 hover:bg-gray-100 rounded-md">
+                    <i class="fas fa-receipt mr-2"></i> Order
+                </a>
+                <a href="#" class="flex items-center py-2 px-4 text-gray-700 hover:bg-gray-100 rounded-md">
+                    <i class="fas fa-cog mr-2"></i> Settings
+                </a>
+                <!-- Add more navigation links as needed -->
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-4 flex flex-col">
+
+            <header class="flex justify-between items-center mb-4 border-b pb-4">
+                <!-- Menu tabs -->
+                <div class="flex space-x-2">
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-md">All Menu</button>
+                    <button class="px-4 py-2 rounded-md">Foods</button>
+                    <button class="px-4 py-2 rounded-md">Beverages</button>
+                    <button class="px-4 py-2 rounded-md">Dessert</button>
+                </div>
+                <div class="flex items-center">
+                    <a href="#" class="mr-4 text-gray-700">Order Archive</a>
+                    <div class="flex items-center">
+                        <img class="w-10 h-10 rounded-full" src="https://placekitten.com/40/40" alt="profile image" />
+                        <div class="ml-2 text-sm">
+                            <p>John Doe</p>
+                            <p class="text-gray-500">Cashier</p>
+                        </div>
+                        <a href="#" class="ml-4 text-red-500">
+                            <i class="fas fa-sign-out-alt"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </header>
+            <div class="flex flex-1">
+                <!-- Menu Items Section -->
+                <section class="flex-1 grid grid-cols-3 gap-4 pr-4">
+                    <!-- Menu Items will go here -->
+                </section>
+
+                <!-- Order List -->
+                <aside class="w-80 bg-white border-l p-4 flex flex-col">
+                    <div class="flex justify-between border-b pb-2 mb-4 items-center">
+                        <div>
+                            <h3 class="text-lg font-bold">List Order</h3>
+                            <p class="text-gray-500 text-xs">No Order: ORDER1234567890</p>
+                        </div>
+
+                        <i class="fas fa-external-link-alt text-gray-500"></i>
+                    </div>
+                    <div class="flex mb-4">
+                        <button class="bg-blue-500 text-white py-2 px-4 rounded-md mr-2 flex-1">Dine In</button>
+                        <button class="py-2 px-4 rounded-md border border-gray-300 flex-1">Take Away</button>
+                    </div>
+
+                    <div class="mb-4">
+                        <input type="text" placeholder="Customer Name"
+                            class="px-3 py-2 border border-gray-300 rounded-md w-full focus:outline-none focus:border-blue-500 mb-2">
+                        <select
+                            class="px-3 py-2 border border-gray-300 rounded-md w-full focus:outline-none focus:border-blue-500">
+                            <option>Select No.Table</option>
+                            <option>Table 1</option>
+                            <option>Table 2</option>
+                            <option>Table 3</option>
+                        </select>
+                    </div>
+
+                    <div id="selected-menu-list" class="flex-1 overflow-y-auto">
+                        <p class="text-gray-400 text-center mt-20">No Menu Selected</p>
+                    </div>
+                    <button class="bg-gray-300 text-gray-600 py-3 px-4 rounded-md text-center mt-4">Pay</button>
+
+                </aside>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
